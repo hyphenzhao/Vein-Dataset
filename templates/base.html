@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{% block title %}静脉疾病专病数据库{% endblock %}</title>
+  <link rel="icon" href="{% static 'argon/assets/img/brand/favicon.png' %}" type="image/png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <link rel="stylesheet" href="{% static 'argon/assets/vendor/nucleo/css/nucleo.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'argon/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'argon/assets/css/argon.css' %}?v=1.2.0" type="text/css">
+  {% block stylesheets %}{% endblock %}
+</head>
+<body class="g-sidenav-show bg-gray-100">
+  {% include 'argon/includes/sidenav.html' %}
+  <div class="main-content" id="panel">
+    {% include 'argon/includes/navigation.html' %}
+    {% block content %}{% endblock %}
+  </div>
+  {% include 'argon/includes/scripts.html' %}
+  <script src="{% static 'argon/assets/js/argon.js' %}?v=1.2.0"></script>
+  {% block javascripts %}{% endblock %}
+</body>
+</html>

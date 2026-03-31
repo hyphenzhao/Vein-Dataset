@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}全局总览 - 静脉疾病数据管理{% endblock %}
+{% block content %}
+<div class="container-fluid mt-4">
+  <div class="row mb-4">
+    <div class="col-12">
+      <h2 class="text-uppercase text-muted">全局总览</h2>
+      <p class="text-sm text-muted">此处将展示患者录入率、子模块完成度等核心指标。</p>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <div class="card card-stats">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <h5 class="card-title text-uppercase text-muted mb-0">数据库录入总人数</h5>
+              <span class="h2 font-weight-bold mb-0">{{ stats.total_patients }}</span>
+            </div>
+            <div class="col-auto">
+              <div class="icon icon-shape bg-primary text-white rounded-circle shadow">
+                <i class="ni ni-single-02"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% for section in stats.sections %}
+    <div class="col-xl-3 col-md-6">
+      <div class="card card-stats">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <h5 class="card-title text-uppercase text-muted mb-0">{{ section.label }}</h5>
+              <span class="h2 font-weight-bold mb-0">{{ section.percent }}%</span>
+            </div>
+            <div class="col-auto">
+              <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                <i class="ni ni-chart-bar-32"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="card shadow">
+    <div class="card-header border-0">
+      <h3 class="mb-0">系统资源 (占位)</h3>
+    </div>
+    <div class="card-body">
+      <p class="text-muted mb-0">稍后可加入 CPU / 内存 / 磁盘使用率的动态图表。</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

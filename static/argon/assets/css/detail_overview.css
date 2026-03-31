@@ -1,0 +1,65 @@
+#id_past_medical_history > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+#id_name, #id_admission_diagnosis {
+    width: 150px !important;
+}
+#id_other_medical_history > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+#id_eeg_interictal_state > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+#id_eeg_interictal_location > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+#id_eeg_interictal_morph > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+#id_eeg_interictal_amount > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+#id_eeg_interictal_pattern > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+#id_eeg_interictal_eye_relation > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#id_eeg_onset_pattern > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#id_eeg_ictal_state > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+#id_eeg_ictal_location > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+#id_seeg_ictal_morph > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+#id_seeg_ictal_amount > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+#id_seeg_ictal_pattern > div {
+    display: inline-block;
+    margin-right: 20px;
+}
+#id_seeg_ictal_onset_pattern > div {
+    display: inline-block;
+    margin-right: 20px;
+}

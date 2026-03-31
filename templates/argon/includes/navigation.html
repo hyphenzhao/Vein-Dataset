@@ -1,0 +1,43 @@
+{% load static %}
+<nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="navbar-search navbar-search-light form-inline mr-sm-3" method="get" action="{% url 'portal:patients' %}">
+        <div class="form-group mb-0">
+          <div class="input-group input-group-alternative input-group-merge">
+            <div class="input-group-prepend">
+              <button class="input-group-text" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <input class="form-control" type="text" name="q" placeholder="搜索患者姓名 / 科室 / 床号" value="{{ request.GET.q|default_if_none:'' }}">
+          </div>
+        </div>
+      </form>
+      <ul class="navbar-nav align-items-center ml-auto ml-md-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="media align-items-center">
+              <span class="avatar avatar-sm rounded-circle">
+                <img alt="avatar" src="{% static 'argon/assets/img/theme/team-4.jpg' %}">
+              </span>
+              <div class="media-body ml-2 d-none d-lg-block">
+                <span class="mb-0 text-sm font-weight-bold">{{ request.user.get_full_name|default:request.user.username }}</span>
+              </div>
+            </div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-header noti-title">
+              <h6 class="text-overflow m-0">欢迎使用静脉疾病数据库！</h6>
+            </div>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <i class="ni ni-user-run text-red"></i>
+              <span>退出登录（占位）</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
